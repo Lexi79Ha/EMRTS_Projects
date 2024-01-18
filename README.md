@@ -10,5 +10,5 @@
 - import itertools<br>
 - import geopy<br>
 - import unittest</h4>
-<h3>Author and Contributors</h3>
-<h4>Alexis Harris <br> Feier</h4>
+<h3>Author</h3>
+<h4>Alexis Harris</h4>
