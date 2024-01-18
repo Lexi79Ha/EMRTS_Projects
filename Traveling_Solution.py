@@ -3,7 +3,7 @@ import pandas as pd
 # %%
 capitals = pd.read_csv(r"C:\Users\lmhmo\PycharmProjects\Traveling_Politcian\.venv\us-state-capitals.csv")
 # %%
-print(capitals)
+
 # %%
 import matplotlib.pyplot as plt
 
@@ -77,11 +77,7 @@ for _, row in capitals.iterrows():
 # Get the cluster numbers in sorted order
 sorted_clusters = sorted(clusters.keys())
 
-# Print the clusters and their locations in sorted order
-for cluster in sorted_clusters:
-    print(f"Cluster {cluster}:")
-    for location in clusters[cluster]:
-        print(f"{location['name']}: {location['latitude']},{location['longitude']}'")
+
 # %%
 import itertools
 from geopy.distance import geodesic
@@ -115,10 +111,10 @@ for route in routes:
 min_distance7 = min(distances)
 min_route7 = routes[distances.index(min_distance7)]
 
-print(f"Shortest Route: {[location['name'] for location in min_route7]}, Total Distance: {min_distance7:.2f} miles")
+
 # %%
 last_state_7 = min_route7[-1]
-print(last_state_7)
+
 # %%
 import itertools
 from geopy.distance import geodesic
@@ -158,11 +154,11 @@ else:
     min_distance2 = min(distances)
     min_route2 = routes[distances.index(min_distance2)]
 
-    print(f"Shortest Route: {[location['name'] for location in min_route2]}, Total Distance: {min_distance2:.2f} miles")
+
 
 # %%
 last_state_2 = min_route2[-1]
-print(last_state_2)
+
 # %%
 import itertools
 from geopy.distance import geodesic
@@ -202,11 +198,11 @@ else:
     min_distance6 = min(distances)
     min_route6 = routes[distances.index(min_distance6)]
 
-    print(f"Shortest Route: {[location['name'] for location in min_route6]}, Total Distance: {min_distance6:.2f} miles")
+
 
 # %%
 last_state_6 = min_route6[-1]
-print(last_state_6)
+
 # %%
 import itertools
 from geopy.distance import geodesic
@@ -250,11 +246,11 @@ else:
     min_distance8 = min(distances)
     min_route8 = routes[distances.index(min_distance8)]
 
-    print(f"Shortest Route: {[location['name'] for location in min_route8]}, Total Distance: {min_distance8:.2f} miles")
+
 
 # %%
 last_state_8 = min_route8[-1]
-print(last_state_8)
+
 # %%
 import itertools
 from geopy.distance import geodesic
@@ -298,11 +294,11 @@ else:
     min_distance0 = min(distances)
     min_route0 = routes[distances.index(min_distance0)]
 
-    print(f"Shortest Route: {[location['name'] for location in min_route0]}, Total Distance: {min_distance0:.2f} miles")
+
 # %%
 
 last_state_0 = min_route0[-1]
-print(last_state_0)
+
 # %%
 import itertools
 from geopy.distance import geodesic
@@ -346,11 +342,10 @@ else:
     min_distance11 = min(distances)
     min_route11 = routes[distances.index(min_distance11)]
 
-    print(
-        f"Shortest Route: {[location['name'] for location in min_route11]}, Total Distance: {min_distance11:.2f} miles")
+
 # %%
 last_state_11 = min_route11[-1]
-print(last_state_11)
+
 # %%
 import itertools
 from geopy.distance import geodesic
@@ -394,10 +389,9 @@ else:
     min_distance4 = min(distances)
     min_route4 = routes[distances.index(min_distance4)]
 
-    print(f"Shortest Route: {[location['name'] for location in min_route4]}, Total Distance: {min_distance4:.2f} miles")
+
 # %%
 last_state_4 = min_route4[-1]
-print(last_state_4)
 # %%
 import itertools
 from geopy.distance import geodesic
@@ -441,11 +435,10 @@ else:
     min_distance10 = min(distances)
     min_route10 = routes[distances.index(min_distance10)]
 
-    print(
-        f"Shortest Route: {[location['name'] for location in min_route10]}, Total Distance: {min_distance10:.2f} miles")
+
 # %%
 last_state_10 = min_route10[-1]
-print(last_state_10)
+
 # %%
 import itertools
 from geopy.distance import geodesic
@@ -489,10 +482,9 @@ else:
     min_distance3 = min(distances)
     min_route3 = routes[distances.index(min_distance3)]
 
-    print(f"Shortest Route: {[location['name'] for location in min_route3]}, Total Distance: {min_distance3:.2f} miles")
 # %%
 last_state_3 = min_route3[-1]
-print(last_state_3)
+
 # %%
 import itertools
 from geopy.distance import geodesic
@@ -536,11 +528,10 @@ else:
     min_distance12 = min(distances)
     min_route12 = routes[distances.index(min_distance12)]
 
-    print(
-        f"Shortest Route: {[location['name'] for location in min_route12]}, Total Distance: {min_distance12:.2f} miles")
+
 # %%
 last_state_12 = min_route12[-1]
-print(last_state_12)
+
 # %%
 import itertools
 from geopy.distance import geodesic
@@ -584,11 +575,9 @@ else:
     min_distance1 = min(distances)
     min_route1 = routes[distances.index(min_distance1)]
 
-    print(f"Shortest Route: {[location['name'] for location in min_route1]}, Total Distance: {min_distance1:.2f} miles")
-
 # %%
 last_state_1 = min_route1[-1]
-print(last_state_1)
+
 
 # %%
 import itertools
@@ -633,12 +622,8 @@ else:
     min_distance9 = min(distances)
     min_route9 = routes[distances.index(min_distance9)]
 
-    print(f"Shortest Route: {[location['name'] for location in min_route9]}, Total Distance: {min_distance9:.2f} miles")
 # %%
-
 last_state_9 = min_route9[-1]
-print(last_state_9)
-
 # %%
 import itertools
 from geopy.distance import geodesic
@@ -681,12 +666,9 @@ else:
     # Find the shortest route
     min_distance5 = min(distances)
     min_route5 = routes[distances.index(min_distance5)]
-
-    print(f"Shortest Route: {[location['name'] for location in min_route5]}, Total Distance: {min_distance5:.2f} miles")
-
 # %%
 last_state_5 = min_route5[-1]
-print(last_state_5)
+
 # %%
 import itertools
 from geopy.distance import geodesic, distance
@@ -741,8 +723,6 @@ for route in routes:
 # Find the shortest route
 min_distance13 = min(distances)
 min_route13 = routes[distances.index(min_distance13)]
-
-print(f"Shortest Route: {[location['name'] for location in min_route13]}, Total Distance: {min_distance13:.2f} miles")
 
 # %%
 total_distance = (
