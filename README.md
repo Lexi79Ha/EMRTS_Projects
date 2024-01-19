@@ -14,4 +14,5 @@
 <h3>Author</h3>
 <h4>Alexis Harris</h4>
 <h4>Email for Questions: Lmh.mo.6@gmail.com</h4>
-
+<h3>Contributors</h3>
+<h4>Feier</h4>
