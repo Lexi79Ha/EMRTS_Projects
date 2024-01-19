@@ -9,8 +9,8 @@
 - import folium<br>
 - import itertools<br>
 - import geopy<br>
-- import unittest<br><h5>only for test file</h5>
-- import geometry</h4><h5>only for test file</h5>
+- import unittest<br>
+- import geometry</h4>
 <h3>Author</h3>
 <h4>Alexis Harris</h4>
 <h4>Email for Questions: Lmh.mo.6@gmail.com</h4>
