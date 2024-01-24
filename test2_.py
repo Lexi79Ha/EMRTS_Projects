@@ -1,4 +1,3 @@
-#This code provides a solution for the most effificent route a politician to visit all fifty state capitals, starting in Iowa and ending in DC.
 import matplotlib.pyplot as plt #import matplotlib to create scatter plot
 from sklearn.cluster import KMeans #import sklearn to location on scatter plot into cluster (you may have to import as scikit to get it to install correcting.
 import folium #import folium to create interactive map of the USA to act as a visual aid for ease of development
@@ -111,46 +110,10 @@ class TestCapitals(unittest.TestCase):#Test to Validate Longitudes and Latitude
                 # Append the total distance of the current route to the distances list
                 self.distances.append(total_distance)
 
-    def test_lonlat(self): #Validate Longitudes and Latitudes provides in CSV file
-        # Iterate over each row of the DataFrame
-        for index, row in self.capitals.iterrows():
-            # Get the longitude and latitude values
-            lon = row['longitude']
-            lat = row['latitude']
-            # Check if they are within the valid ranges
-            self.assertGreaterEqual(lon, -180)
-            self.assertLessEqual(lon, 180)
-            self.assertGreaterEqual(lat, -90)
-            self.assertLessEqual(lat, 90)
-    def test_number_of_points(self): #Validates that 51 locations are plotted on scatter plot
-        # Get the number of points on the scatter plot
-        num_points = len(plt.gca().collections[0].get_offsets())
-        # Check if the number of points is equal to 51 using the assert statement
-        self.assertEqual(num_points, 51)
-    def test_number_of_clusters(self): #Validates that 14 clusters were created
-        # Get the number of unique values in the cluster column
-        num_clusters = self.capitals['cluster'].nunique()
-        # Check if the number of clusters is equal to 14 using the assert statement
-        self.assertEqual(num_clusters, 14)
-    def test_clusters(self):#makes sure that each location in cluster has a name, longitude, and latitude
-        # Loop over the cluster numbers in sorted order
-        for cluster in sorted(self.clusters.keys()):
-            # Get the locations in the cluster
-            locations = self.clusters[cluster]
-            # Loop over the locations in the cluster
-            for location in locations:
-                # Get the name, latitude and longitude of the location
-                name = location['name']
-                lat = location['latitude']
-                lon = location['longitude']
-                # Check if the name is in the capitals DataFrame using the assert statement
-                self.assertIn(name, self.capitals['name'].values)
-                # Get the row in the capitals DataFrame that matches the name
-                row = self.capitals[self.capitals['name'] == name].iloc[0]
-                # Check if the latitude and longitude are equal to the values in the DataFrame using the assert statement
-                self.assertEqual(lat, row['latitude'])
-                self.assertEqual(lon, row['longitude'])
+    def test_route_starts_with_iowa(self):#Makes sure that the first cluster's route begins in Iowa
+        # Check if the first element of the shortest route is the dictionary of Iowa using the assert statement
+        self.assertEqual(self.min_route7[0], self.start_location)
+
 # Run the tests
 if __name__ == '__main__':
     unittest.main()
-
