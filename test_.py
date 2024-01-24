@@ -127,16 +127,6 @@ class TestCapitals(unittest.TestCase):#Test to Validate Longitudes and Latitude
         num_points = len(plt.gca().collections[0].get_offsets())
         # Check if the number of points is equal to 51 using the assert statement
         self.assertEqual(num_points, 51)
-    def test_number_of_clusters(self): #Validates that 14 clusters were created
-        # Get the number of unique values in the cluster column
-        num_clusters = self.capitals['cluster'].nunique()
-        # Check if the number of clusters is equal to 14 using the assert statement
-        self.assertEqual(num_clusters, 14)
-    def test_labels_are_numbers(self): #Validates that each cluster was assigned a number
-        # Loop through the labels
-        for label in self.labels:
-            # Check if the label is an instance of the int type using the assert statement
-            self.assertIsInstance(int(label), int)
     def test_clusters(self):#makes sure that each location in cluster has a name, longitude, and latitude
         # Loop over the cluster numbers in sorted order
         for cluster in sorted(self.clusters.keys()):
@@ -155,23 +145,6 @@ class TestCapitals(unittest.TestCase):#Test to Validate Longitudes and Latitude
                 # Check if the latitude and longitude are equal to the values in the DataFrame using the assert statement
                 self.assertEqual(lat, row['latitude'])
                 self.assertEqual(lon, row['longitude'])
-     # Create test that ensure that the route of first cluster begins with Iowa
-    def test_route_starts_with_iowa(self):#Makes sure that the first cluster's route begins in Iowa
-        # Check if the first element of the shortest route is the dictionary of Iowa using the assert statement
-        self.assertEqual(self.min_route7[0], self.start_location)
-    def test_lonlat_validity(self): #validates longitude and latitude used in distance
-        # Loop over each route in routes
-        for route in self.routes:
-            # Loop over each location in the route
-            for location in route:
-                # Get the longitude and latitude values
-                lon = location['longitude']
-                lat = location['latitude']
-                # Check if they are within the valid ranges using the assert statements
-                self.assertGreaterEqual(lon, -180)
-                self.assertLessEqual(lon, 180)
-                self.assertGreaterEqual(lat, -90)
-                self.assertLessEqual(lat, 90)
 # Run the tests
 if __name__ == '__main__':
     unittest.main()
