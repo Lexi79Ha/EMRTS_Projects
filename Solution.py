@@ -1,9 +1,9 @@
-# This code provides a solution for the most effificent route a politician to visit all fifty state capitals, starting in Iowa and ending in DC.
+# This code provides a solution for the most efficient route for politician to travel in order to visit all fifty state capitals, starting in Iowa and ending in DC.
 # The shortest route is found through using geopy to calculate the distance between the capital's longitude and latitude coordinates, and itertools permutations to generate different route combinations.
-# Due to the amount of locations the capitals have to be grouped into clusters to avoid the system overloading from the amount of permutations all 50 states would create if calculated as one group.
+# Due to the amount of locations, the capitals have to be grouped into clusters to avoid the system overloading from the amount of permutations all 50 states would create if calculated as one group.
 # The first cluster's route must start in Iowa, and the last cluster's route must end in DC. 
 # All other cluster's will be linked together by adding conditions to make the cluster route beginning with whatever location the previous cluster's route ended with.
-# Once the minimum routes are found for each cluster the total distances of those routes will be added together calculated and the systen will output the total distance and completed route the politician will travel.
+# Once the minimum routes are found for each cluster the total distances of those routes will be added together and the systen will output the total distance and the shortest route for the politician to travel.
 
 import pandas as pd  # import pandas to read and manipulate csv file
 import matplotlib.pyplot as plt  # import matplotlib to create scatter plot
