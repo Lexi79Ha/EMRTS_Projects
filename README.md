@@ -12,9 +12,9 @@
 - import unittest(For test file only)<br>
 - import geometry(For test file only)</h4>
 <h3>Test Units</h3>
-<h2>Test_.py will validate # of locations, longitudes, latitudes, and dictionary items</h2>
-<h2>Test_.py will validate that the politician's route begins in Iowa</h2>
-<h2>Solutions.pynb test located at the end of the file will validate that the politician's route ends in DC</h2>
+<h4>Test_.py will validate # of locations, longitudes, latitudes, and dictionary items</h4>
+<h4>Test2_.py will validate that the politician's route begins in Iowa</h4>
+<h4>Solutions.pynb test located at the end of the file will validate that the politician's route ends in DC</h4>
 <h3>Author</h3>
 <h4>Alexis Harris</h4>
 <h4>Email for Questions: Lmh.mo.6@gmail.com</h4>
