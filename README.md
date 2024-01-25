@@ -11,7 +11,7 @@
 - import geopy<br>
 - import unittest(For test file only)<br>
 - import geometry(For test file only)</h4>
-<h3>Test Units</h3>
+<h2>Test Units</h2>
 <h4>-Test_.py will validate # of locations, longitudes, latitudes, and dictionary items.<br>
 -Test2_.py will validate that the politician's route begins in Iowa.<br>
 -Solutions.pynb has a test located at the end of the file that will validate that the politician's route ends in DC.</h4>
