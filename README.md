@@ -3,6 +3,9 @@
 <h2> What does the program do?</h2
 <h4> 1. Imports a CVS file that contains all the capital cities of the US and their longitudes and latitudes.<br>2. Creates a Scatter plot,groups State Capitals into small clusters, and assigns clusters to numbers.<br>
   4. Uses itertools to find permutations for every possible route.<br>5. Uses geopy to calculate distance between each coordinate.<br>5. Identifies the route with the shortest distance.<br>6. Repeats process through each cluster.<br>7. Adds total distance together and outputs the entire route that will be traveled.</h4>
+<h2>How to Use</h2>
+<h4>Download zip file or use command prompt below</h4>
+<h4>git clone https://github.com/Lexi79Ha/Traveling_politician.git</h4>
 <h2>What to Import?</h2>
 <h4>- import matplotlib.pyplot as plt<br>
 - import sklearn<br>
